@@ -21,3 +21,32 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+    seen = set()
+    counts = set(nums)
+    # pairs = []
+
+    for num in nums:
+        if goal - num in counts:
+            seen.add(goal - num)
+        if num in seen:
+            return (goal - num, num)
+
+    return ()
+
+    # for num in nums:
+    #     if goal - num in counts:
+    #         pairs.append([num, goal-num])
+    #         counts.remove(num)
+    # if not pairs:
+    #     return ()
+
+    # lowest_idx = len(nums)
+    # idx = 0
+
+    # for i in range(len(pairs)):
+    #     if nums.index(pairs[i][1]) < lowest_idx: 
+    #         lowest_idx = nums.index(pairs[i][1])
+    #         idx = i 
+            
+
+    # return tuple(pairs[idx])
