@@ -19,3 +19,5 @@ def extract_full_names(people):
     for names in people:
         lst.append(f'{names["first"]} {names["last"]}')
     return lst
+
+    #could use comprehension

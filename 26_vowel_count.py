@@ -16,3 +16,5 @@ def vowel_count(phrase):
             counts[char] = counts.get(char, 0) + 1
 
     return counts 
+
+    #store vowels in a set so look up time = O(1)

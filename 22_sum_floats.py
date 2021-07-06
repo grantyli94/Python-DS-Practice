@@ -19,3 +19,6 @@ def sum_floats(nums):
             sum += num
     
     return sum
+
+    #could use list comprehension
+    #sum([stuff])
